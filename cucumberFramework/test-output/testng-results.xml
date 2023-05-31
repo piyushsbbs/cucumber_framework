@@ -2,24 +2,103 @@
 <testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="5929" started-at="2023-05-31T14:59:22Z" finished-at="2023-05-31T14:59:28Z">
+  <suite name="Default suite" duration-ms="4306" started-at="2023-05-31T15:57:29Z" finished-at="2023-05-31T15:57:33Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="5929" started-at="2023-05-31T14:59:22Z" finished-at="2023-05-31T14:59:28Z">
+    <test name="Default test" duration-ms="4306" started-at="2023-05-31T15:57:29Z" finished-at="2023-05-31T15:57:33Z">
       <class name="schmeValidators.swgger">
-        <test-method status="FAIL" signature="schema()[pri:0, instance:schmeValidators.swgger@57fffcd7]" name="schema" duration-ms="5887" started-at="2023-05-31T14:59:22Z" finished-at="2023-05-31T14:59:28Z">
-          <exception class="java.lang.IllegalArgumentException">
+        <test-method status="FAIL" signature="schema()[pri:0, instance:schmeValidators.swgger@57fffcd7]" name="schema" duration-ms="4260" started-at="2023-05-31T15:57:29Z" finished-at="2023-05-31T15:57:33Z">
+          <exception class="org.xml.sax.SAXParseException">
             <message>
-              <![CDATA[Schema to use cannot be null]]>
+              <![CDATA[cvc-complex-type.2.4.a: Invalid content was found starting with element 'id'. One of '{iid}' is expected.]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.IllegalArgumentException: Schema to use cannot be null
-at io.restassured.module.jsv.JsonSchemaValidator.validateSchemaIsNotNull(JsonSchemaValidator.java:270)
-at io.restassured.module.jsv.JsonSchemaValidator.access$300(JsonSchemaValidator.java:75)
-at io.restassured.module.jsv.JsonSchemaValidator$JsonSchemaValidatorFactory.create(JsonSchemaValidator.java:281)
-at io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchema(JsonSchemaValidator.java:166)
-at io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath(JsonSchemaValidator.java:117)
-at schmeValidators.swgger.schema(swgger.java:56)
+              <![CDATA[org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 81; cvc-complex-type.2.4.a: Invalid content was found starting with element 'id'. One of '{iid}' is expected.
+at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:203)
+at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.error(ErrorHandlerWrapper.java:134)
+at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:396)
+at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:327)
+at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:284)
+at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator$XSIErrorReporter.reportError(XMLSchemaValidator.java:453)
+at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.reportSchemaError(XMLSchemaValidator.java:3231)
+at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.handleStartElement(XMLSchemaValidator.java:1791)
+at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.startElement(XMLSchemaValidator.java:741)
+at com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.scanStartElement(XMLNSDocumentScannerImpl.java:374)
+at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2784)
+at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:602)
+at com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.next(XMLNSDocumentScannerImpl.java:112)
+at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:505)
+at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:842)
+at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:771)
+at com.sun.org.apache.xerces.internal.jaxp.validation.StreamValidatorHelper.validate(StreamValidatorHelper.java:152)
+at com.sun.org.apache.xerces.internal.jaxp.validation.ValidatorImpl.validate(ValidatorImpl.java:116)
+at javax.xml.validation.Validator.validate(Validator.java:124)
+at javax.xml.validation.Validator$validate.call(Unknown Source)
+at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:139)
+at io.restassured.internal.matcher.xml.XmlXsdMatcher.matches(XmlXsdMatcher.groovy:84)
+at org.hamcrest.Matcher$matches$0.call(Unknown Source)
+at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:139)
+at io.restassured.assertion.BodyMatcher.validate(BodyMatcher.groovy:76)
+at io.restassured.assertion.BodyMatcher$validate$0.call(Unknown Source)
+at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:157)
+at io.restassured.assertion.BodyMatcherGroup$_validate_closure2.doCall(BodyMatcherGroup.groovy:47)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:263)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1029)
+at groovy.lang.Closure.call(Closure.java:412)
+at groovy.lang.Closure.call(Closure.java:428)
+at org.codehaus.groovy.runtime.DefaultGroovyMethods.collect(DefaultGroovyMethods.java:3564)
+at org.codehaus.groovy.runtime.DefaultGroovyMethods.collect(DefaultGroovyMethods.java:3549)
+at org.codehaus.groovy.runtime.DefaultGroovyMethods.collect(DefaultGroovyMethods.java:3649)
+at org.codehaus.groovy.runtime.dgm$101.invoke(Unknown Source)
+at org.codehaus.groovy.runtime.callsite.PojoMetaMethodSite$PojoMetaMethodSiteNoUnwrapNoCoerce.invoke(PojoMetaMethodSite.java:247)
+at org.codehaus.groovy.runtime.callsite.PojoMetaMethodSite.call(PojoMetaMethodSite.java:56)
+at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:139)
+at io.restassured.assertion.BodyMatcherGroup.validate(BodyMatcherGroup.groovy:47)
+at io.restassured.assertion.BodyMatcherGroup$validate$3.call(Unknown Source)
+at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:157)
+at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:480)
+at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:674)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:193)
+at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:61)
+at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:51)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
+at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:98)
+at io.restassured.internal.ValidatableResponseOptionsImpl.body(ValidatableResponseOptionsImpl.java:238)
+at io.restassured.internal.ValidatableResponseImpl.super$2$body(ValidatableResponseImpl.groovy)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1262)
+at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.invokeMethodOnSuperN(ScriptBytecodeAdapter.java:144)
+at io.restassured.internal.ValidatableResponseImpl.body(ValidatableResponseImpl.groovy:293)
+at io.restassured.internal.ValidatableResponseImpl.body(ValidatableResponseImpl.groovy)
+at schmeValidators.swgger.schema(swgger.java:20)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -47,7 +126,7 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.IllegalArgumentException -->
+          </exception> <!-- org.xml.sax.SAXParseException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- schema -->

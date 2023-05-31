@@ -1,38 +1,36 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Created with Liquid Technologies Online Tools 1.0 (https://www.liquid-technologies.com) -->
 <xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:element name="pets">
     <xs:complexType>
       <xs:sequence>
-        <xs:element maxOccurs="unbounded" name="Pet">
+        <xs:element name="Pet" maxOccurs="unbounded" minOccurs="0">
           <xs:complexType>
             <xs:sequence>
-              <xs:element minOccurs="0" name="category">
+              <xs:element name="category" minOccurs="0">
                 <xs:complexType>
                   <xs:sequence>
-                    <xs:element name="id" type="xs:long" />
-                    <xs:element name="name" type="xs:string" />
+                    <xs:element type="xs:long" name="id"/>
+                    <xs:element type="xs:string" name="name" minOccurs="0"/>
                   </xs:sequence>
                 </xs:complexType>
               </xs:element>
-              <xs:element name="id" type="xs:unsignedLong" />
-              <xs:element name="name" type="xs:string" />
+              <xs:element type="xs:long" name="id"/>
+              <xs:element type="xs:string" name="name" minOccurs="0"/>
               <xs:element name="photoUrls">
-                <xs:complexType>
-                  <xs:sequence minOccurs="0">
-                    <xs:element maxOccurs="unbounded" name="photoUrl" type="xs:string" />
+                <xs:complexType mixed="true">
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="photoUrl" maxOccurs="unbounded" minOccurs="0"/>
                   </xs:sequence>
                 </xs:complexType>
               </xs:element>
-              <xs:element name="status" type="xs:string" />
+              <xs:element type="xs:string" name="status"/>
               <xs:element name="tags">
-                <xs:complexType>
-                  <xs:sequence minOccurs="0">
-                    <xs:element maxOccurs="unbounded" name="tag">
+                <xs:complexType mixed="true">
+                  <xs:sequence>
+                    <xs:element name="tag" maxOccurs="unbounded" minOccurs="0">
                       <xs:complexType>
                         <xs:sequence>
-                          <xs:element name="id" type="xs:long" />
-                          <xs:element name="name" type="xs:string" />
+                          <xs:element type="xs:long" name="id"/>
+                          <xs:element type="xs:string" name="name"/>
                         </xs:sequence>
                       </xs:complexType>
                     </xs:element>

@@ -7,6 +7,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import static io.restassured.RestAssured.*;
+import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
 import static org.junit.Assert.*;
 
 import io.restassured.builder.RequestSpecBuilder;
@@ -56,6 +57,7 @@ public class stepDefination extends utils {
 	public void status_should(int int1) {
 	    // Write code here that turns the phrase above into concrete actions
 		int code=respon.getStatusCode();
+		respon.then().body(matchesJsonSchemaInClasspath("jsonschema.json"));
 	   assertEquals(int1,code);
 	}
 	@Then("reponse body {string} must have value {string}")
