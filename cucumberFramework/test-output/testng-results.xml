@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="6169" started-at="2023-05-31T14:51:52Z" finished-at="2023-05-31T14:51:59Z">
+  <suite name="Default suite" duration-ms="5929" started-at="2023-05-31T14:59:22Z" finished-at="2023-05-31T14:59:28Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="6169" started-at="2023-05-31T14:51:52Z" finished-at="2023-05-31T14:51:59Z">
+    <test name="Default test" duration-ms="5929" started-at="2023-05-31T14:59:22Z" finished-at="2023-05-31T14:59:28Z">
       <class name="schmeValidators.swgger">
-        <test-method status="FAIL" signature="schema()[pri:0, instance:schmeValidators.swgger@57fffcd7]" name="schema" duration-ms="6129" started-at="2023-05-31T14:51:52Z" finished-at="2023-05-31T14:51:59Z">
+        <test-method status="FAIL" signature="schema()[pri:0, instance:schmeValidators.swgger@57fffcd7]" name="schema" duration-ms="5887" started-at="2023-05-31T14:59:22Z" finished-at="2023-05-31T14:59:28Z">
           <exception class="java.lang.IllegalArgumentException">
             <message>
               <![CDATA[Schema to use cannot be null]]>

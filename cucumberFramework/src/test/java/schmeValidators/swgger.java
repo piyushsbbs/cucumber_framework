@@ -53,7 +53,7 @@ public class swgger {
 			
 			given().log().all().queryParam("key", "qaclick123")
 			.queryParam("place_id",place).when().get("maps/api/place/get/json").
-			then().assertThat().statusCode(200).log().all().body(matchesJsonSchemaInClasspath("target/classes/jsonschema.json"));
+			then().assertThat().statusCode(200).log().all().body(matchesJsonSchemaInClasspath("src/test/resources/jsonschema.json"));
 
 
 
