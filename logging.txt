@@ -8,7 +8,7 @@ Path params:	<none>
 Headers:		Accept=*/*
 				Content-Type=application/json; charset=UTF-8
 Cookies:		<none>
-Multiparts:		<none>
+
 Body:
 {
     "location": {
