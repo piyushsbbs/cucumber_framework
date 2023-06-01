@@ -11,12 +11,16 @@ import static io.restassured.RestAssured.*;
 public class swgger {
 	@Test
 	public void schema(){
-//		Adding branch
+//		Adding branch in git branch
 		RestAssured.baseURI="https://petstore.swagger.io";
 		Response str=given().log().all().header("Accept","application/xml").queryParam("status", "available")
 		.when().get("v2/pet/findByStatus");
 		
 		str.then().assertThat().statusCode(200).assertThat().log().all().body(matchesXsdInClasspath("demoxsd.xsd"));
+		RestAssured.baseURI="https://petstore.swagger.io";
+		Response str2=given().log().all().header("Accept","application/xml").queryParam("status", "available")
+		.when().get("v2/pet/findByStatus");
+		str2.then().assertThat().statusCode(200).assertThat().log().all().body(matchesJsonSchemaInClasspath("jsonschema.json"));
 	}
 
 }
